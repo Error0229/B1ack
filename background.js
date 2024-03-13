@@ -15,6 +15,7 @@ chrome.webRequest.onBeforeRequest.addListener(
       // file name start with id= ... end with .pdf
       filename = details.url.split("id=")[1].split(".pdf")[0];
       console.log("Url to download:", urlToDownload);
+      console.log("Filename:", filename);
     }
   },
   { urls: [DOMAIN] });
@@ -36,13 +37,20 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
   ["blocking", "requestHeaders", "extraHeaders"]
 );
 
+// override filename
+chrome.downloads.onDeterminingFilename.addListener(
+  function (item, suggest) {
+    suggest({ filename: filename + ".pdf" });
+  }
+)
+
 // Reacting to a browser action click
 chrome.browserAction.onClicked.addListener(function (tab) {
   if (urlToDownload) {
     chrome.tabs.sendMessage(tab.id, { url: urlToDownload }, function (response) {
       chrome.downloads.download({
         url: response.url,
-        filename: filename + ".pdf",
+        conflictAction: "uniquify",
       });
     });
   }
