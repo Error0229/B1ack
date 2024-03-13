@@ -8,8 +8,7 @@
         "webRequest",
         "webRequestBlocking",
         "downloads",
-        "https://istudy.ntut.edu.tw/*",
-        "tabs"
+        "https://istudy.ntut.edu.tw/*"
     ],
     "background": {
         "scripts": [
@@ -20,7 +19,7 @@
     "content_scripts": [
         {
             "matches": [
-                "<all_urls>"
+                "https://istudy.ntut.edu.tw/*"
             ],
             "js": [
                 "content.js"

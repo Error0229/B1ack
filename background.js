@@ -8,14 +8,11 @@ chrome.webRequest.onBeforeRequest.addListener(
   function (details) {
     if (details.url.startsWith("https://istudy.ntut.edu.tw/learn/path/viewPDF.php")) {
       refererURL = details.url;
-      console.log("Referer URL:", refererURL);
     }
     if (details.url.startsWith("https://istudy.ntut.edu.tw/learn/path/getPDF.php")) {
       urlToDownload = details.url;
       // file name start with id= ... end with .pdf
       filename = details.url.split("id=")[1].split(".pdf")[0];
-      console.log("Url to download:", urlToDownload);
-      console.log("Filename:", filename);
     }
   },
   { urls: [DOMAIN] });
