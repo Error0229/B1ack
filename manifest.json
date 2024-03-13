@@ -7,12 +7,15 @@
         "storage",
         "webRequest",
         "webRequestBlocking",
-        "<all_urls>"
+        "downloads",
+        "https://istudy.ntut.edu.tw/*",
+        "tabs"
     ],
     "background": {
         "scripts": [
             "background.js"
-        ]
+        ],
+        "persistent": true
     },
     "content_scripts": [
         {
@@ -24,5 +27,6 @@
             ],
             "run_at": "document_start"
         }
-    ]
+    ],
+    "browser_action": {}
 }
