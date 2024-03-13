@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "Response Saver",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "webRequest",
+        "webRequestBlocking",
+        "downloads",
+        "https://istudy.ntut.edu.tw/*"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": true
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://istudy.ntut.edu.tw/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "browser_action": {}
+}
