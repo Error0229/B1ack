@@ -37,8 +37,12 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
 // override filename
 chrome.downloads.onDeterminingFilename.addListener(
   function (item, suggest) {
-    suggest({ filename: filename + ".pdf" });
-  }
+    if (item.url.startsWith("blob:https://istudy.ntut.edu.tw"))
+      suggest({ filename: filename + ".pdf" });
+    else {
+      suggest({ filename: item.filename });
+    }
+  },
 )
 
 // Reacting to a browser action click

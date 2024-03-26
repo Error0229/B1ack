@@ -11,6 +11,9 @@
         "https://istudy.ntut.edu.tw/*"
     ],
     "background": {
+        "matches": [
+            "https://istudy.ntut.edu.tw/*"
+        ],
         "scripts": [
             "background.js"
         ],
