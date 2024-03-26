@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
-    "name": "Response Saver",
-    "version": "1.0",
+    "name": "Schwarz",
+    "version": "0.229",
     "permissions": [
         "activeTab",
         "storage",
