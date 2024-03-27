@@ -1,0 +1,35 @@
+{
+    "manifest_version": 2,
+    "name": "Schwarz",
+    "version": "0.229",
+    "description": "This is a NTUT istudy helper extension that helps you download the PDF if the teacher forgets to allow it.",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "webRequest",
+        "webRequestBlocking",
+        "downloads",
+        "https://istudy.ntut.edu.tw/*"
+    ],
+    "background": {
+        "matches": [
+            "https://istudy.ntut.edu.tw/*"
+        ],
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": true
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://istudy.ntut.edu.tw/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "browser_action": {}
+}
