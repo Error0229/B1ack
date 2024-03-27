@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "name": "Schwarz",
+    "name": "B1ack",
     "version": "0.229",
     "description": "This is a NTUT istudy helper extension that helps you download the PDF if the teacher forgets to allow it.",
     "permissions": [
