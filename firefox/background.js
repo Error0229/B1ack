@@ -3,6 +3,18 @@ let urlToDownload = null;
 let refererURL = null;
 let filename = null;
 DOMAIN = "https://istudy.ntut.edu.tw/*";
+browser.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+  if (!tab.url.startsWith("https://istudy.ntut.edu.tw/")) {
+    SetIcon("waiting");
+  }
+});
+browser.tabs.onActivated.addListener(function (activeInfo) {
+  chrome.tabs.get(activeInfo.tabId, function (tab) {
+    if (!tab.url.startsWith("https://istudy.ntut.edu.tw/")) {
+      SetIcon("waiting");
+    }
+  });
+});
 // Listening for a request to capture the referer URL
 browser.webRequest.onBeforeRequest.addListener(
   function (details) {
@@ -42,3 +54,24 @@ browser.browserAction.onClicked.addListener(function (tab) {
     });
   }
 });
+
+function SetIcon(state) {
+  if (state == "waiting") {
+    idleIcons = {
+      "16": "images/zzz_16.png",
+      "32": "images/zzz_32.png",
+      "64": "images/zzz_64.png",
+      "128": "images/zzz_128.png"
+    }
+    chrome.browserAction.setIcon({ path: idleIcons });
+  }
+  else if (state == "downloadable") {
+    okIcons = {
+      "16": "images/ok_16.png",
+      "32": "images/ok_32.png",
+      "64": "images/ok_64.png",
+      "128": "images/ok_128.png"
+    }
+    chrome.browserAction.setIcon({ path: okIcons });
+  }
+}
