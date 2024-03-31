@@ -15,7 +15,7 @@ B1ack is an NTUT istudy helper extension that helps you download the PDF if the 
 
 1. Go to releases and download the `B1ack-chrome.zip` file
 2. Unzip them
-3. goto [`edge://extensions/`](edge://extensions/) or [`chrome://extensions/`](chrome://extensions/) or or [`brave://extensions/`](brave://extensions/) based on what browser you use
+3. goto [`edge://extensions/`](edge://extensions/) or [`chrome://extensions/`](chrome://extensions/) or [`brave://extensions/`](brave://extensions/) based on what browser you use
 4. Turn on developer mode
 5. Click load unpacked
 6. Load the extension folder
