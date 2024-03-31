@@ -29,7 +29,7 @@ B1ack is an NTUT istudy helper extension that helps you download the PDF if the 
 ## Usage
 
 1. Go to any NTUT istudy page that contains a pdf viewer
-2. Oh no!👺 The download pdf button doesn't exist at the top left corner of the pdf viewer
+2. Oh no!👺 The download pdf button doesn't appear at the top right corner of the pdf viewer
 3. When the extension icon looks like ✅, Click it.
 4. The pdf should start downloads.
 
