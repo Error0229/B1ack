@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "B1ack",
-    "version": "0.2290",
+    "version": "0.229",
     "description": "This is a NTUT istudy helper extension that helps you download the PDF if the teacher forgets to allow it.",
     "browser_action": {
         "default_icon": {
@@ -21,9 +21,6 @@
         "https://istudy.ntut.edu.tw/*"
     ],
     "background": {
-        "matches": [
-            "https://istudy.ntut.edu.tw/*"
-        ],
         "scripts": [
             "background.js"
         ],
