@@ -11,6 +11,13 @@
             "128": "images/b1ack_128.png"
         }
     },
+    "icons": {
+        "16": "images/dog_16.png",
+        "32": "images/dog_32.png",
+        "48": "images/dog_48.png",
+        "64": "images/dog_64.png",
+        "128": "images/dog_128.png"
+    },
     "permissions": [
         "activeTab",
         "tabs",

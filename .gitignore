@@ -2,3 +2,5 @@
 *.xpi
 *.crx
 *.pem
+web-ext-artifacts/
+.web-extension-id
