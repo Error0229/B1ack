@@ -1,4 +1,5 @@
-# B1ack
+# B1ack 
+![image](./chrome/images/dog_64.png)
 
 B1ack is an NTUT istudy helper extension that helps you download the PDF if the teacher forgets to allow it.
 
